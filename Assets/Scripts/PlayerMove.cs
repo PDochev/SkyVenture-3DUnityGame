@@ -16,6 +16,8 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        Manager3d.lastCheckPoint = transform.position;
     }
 
 
