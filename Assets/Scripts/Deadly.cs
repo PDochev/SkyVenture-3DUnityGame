@@ -8,7 +8,6 @@ public class Deadly : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.position = Manager3d.lastCheckPoint;
             Debug.Log("Dead");
         }
     }
