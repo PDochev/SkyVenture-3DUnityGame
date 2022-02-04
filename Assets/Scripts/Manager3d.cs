@@ -6,7 +6,12 @@ public class Manager3d : MonoBehaviour
 {
     public static Manager3d instance;
     private static int coins;
-    
+
+    public enum DoorKeyColour { Red, Blue, Yellow };//these store the values of red blue and yellow and are variables
+
+    public static bool redKey, blueKey, yellowKey; //these store whether the corresponding keys have been picked up or not
+
+
 
     public static Vector3 lastCheckPoint;
 
@@ -43,5 +48,24 @@ public class Manager3d : MonoBehaviour
                 post.transform.position = Manager3d.lastCheckPoint;
             }
         }*/
+    }
+    public static void KeyPickUp(DoorKeyColour keyColour)
+    {
+        switch (keyColour)
+        {
+            case DoorKeyColour.Red://this is saying if door key colour is red
+                redKey = true;     //and if it is the variable for it being picked up will be true
+                break;
+            case DoorKeyColour.Blue:
+                blueKey = true;
+                break;
+            case DoorKeyColour.Yellow:
+                yellowKey = true;
+                break;
+
+        }
+
+
+        print(keyColour + "key has been picked up");
     }
 }
