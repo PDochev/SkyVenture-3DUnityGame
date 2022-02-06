@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public int coinValue = 5;
+    public int rotateSpeed;
 
 
     private void OnTriggerEnter(Collider collision)
@@ -15,5 +16,10 @@ public class Coin : MonoBehaviour
             Manager3d.AddCoins(coinValue);
             Destroy(gameObject);
         }   
+    }
+
+    private void Update()
+    {
+        transform.Rotate(0, rotateSpeed, 0, Space.World);
     }
 }
