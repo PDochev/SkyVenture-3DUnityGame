@@ -1,4 +1,4 @@
-using System.Collections;
+   using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +10,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jump;
     [SerializeField] float fallMultiplier;
+
+    private  const int maxJump = 2; // this sets how many jumps we want for our player (currently 2 , so we can double jump) 
+    private int currentJump = 0;
 
     public bool playerOnGround = true;
 
@@ -27,6 +30,7 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "MovingPlatform")
         {
             playerOnGround = true;
+            currentJump = 0;
         }
 
         if (collision.gameObject.tag == "MovingPlatform")// this collision detects whether the player is colliding with a moving platform, if it is, it will make the player a child object of the moving platform so that the player moves together with the platform, instead of just falling off~~Karahan
@@ -70,10 +74,11 @@ public class PlayerMove : MonoBehaviour
         Vector3 MoveVector = transform.TransformDirection(playerMovement) * speed;
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
 
-        if (Input.GetButtonDown("Jump") && playerOnGround)
+        if (Input.GetButtonDown("Jump") && (playerOnGround || maxJump > currentJump)) // if our max jump is > 0 , then increment the current jump;
         {
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
+            currentJump++;
         }
     }
 }

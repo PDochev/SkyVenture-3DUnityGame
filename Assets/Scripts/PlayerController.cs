@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     public float gravityScale;
 
+   
+
 
     // Start is called before the first frame update
     void Start()
