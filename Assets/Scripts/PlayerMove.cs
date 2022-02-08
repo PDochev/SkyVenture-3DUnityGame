@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jump;
     [SerializeField] float fallMultiplier;
 
+
     private  const int maxJump = 2; // this sets how many jumps we want for our player (currently 2 , so we can double jump) 
     private int currentJump = 0;
 
@@ -35,11 +36,13 @@ public class PlayerMove : MonoBehaviour
 
         if (collision.gameObject.tag == "MovingPlatform")// this collision detects whether the player is colliding with a moving platform, if it is, it will make the player a child object of the moving platform so that the player moves together with the platform, instead of just falling off~~Karahan
         {
-            gameObject.transform.parent = collision.gameObject.transform;
+             gameObject.transform.parent = collision.gameObject.transform;
             //however the player must then detach from its new parent object, so a "OnCollisionExit" has been used below to detach the player from the moving platform when it is no longer in contact with it~~Karahan
 
         }
     }
+
+    
 
     private void OnCollisionExit(Collision collision)
     {
