@@ -10,12 +10,10 @@ public class Manager3d : MonoBehaviour
     public enum DoorKeyColour { Red, Blue, Yellow };//these store the values of red blue and yellow and are variables
 
     public static bool redKey, blueKey, yellowKey; //these store whether the corresponding keys have been picked up or not
-
-
-
     public static Vector3 lastCheckPoint;
+    public static bool gamePaused;
 
-    public void OnAwake() {
+    public void Awake() {
         if (instance == null)
         {
             instance = this;

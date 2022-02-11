@@ -29,69 +29,71 @@ public class CameraControl : MonoBehaviour
         pivot.transform.position = target.transform.position;
         pivot.transform.parent = target.transform;
 
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     //Late update happens after Update , every frame of animation before it moves to the next frame after update has happend , calls LateUpdate . After the player has moved , then Late Update is called
     void LateUpdate()
     {
-
-        /*float yStore = rb.velocity.y;
+        if (!Manager3d.gamePaused)
+        {
+            /*float yStore = rb.velocity.y;
         rb.velocity = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
         rb.velocity = rb.velocity.normalized * speed;
         rb.velocity = new Vector3(rb.velocity.x, yStore, rb.velocity.z); */
 
 
 
-        //get the x pos of the mouse
-        float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
-        target.Rotate(0, horizontal, 0);
+            //get the x pos of the mouse
+            float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
+            target.Rotate(0, horizontal, 0);
 
-        //Get the Y position of the mouse and rotate the pivot
+            //Get the Y position of the mouse and rotate the pivot
 
-        float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
-        //pivot.Rotate(-vertical, 0, 0);
+            float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
+            //pivot.Rotate(-vertical, 0, 0);
 
-        if (invertY)
-        {
-            pivot.Rotate(vertical, 0, 0);
-        }
-        else
-        {
-            pivot.Rotate(-vertical, 0, 0);
-        }
+            if (invertY)
+            {
+                pivot.Rotate(vertical, 0, 0);
+            }
+            else
+            {
+                pivot.Rotate(-vertical, 0, 0);
+            }
 
 
-        //Limit the up/down camera rotation
-        if(pivot.rotation.eulerAngles.x > maxViewAngle  && pivot.rotation.eulerAngles.x < 180f)
-        {
-            pivot.rotation = Quaternion.Euler(maxViewAngle, 0, 0);
-        }
+            //Limit the up/down camera rotation
+            if (pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f)
+            {
+                pivot.rotation = Quaternion.Euler(maxViewAngle, 0, 0);
+            }
 
-        if(pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minViewAngle)
-        {
-            pivot.rotation = Quaternion.Euler(360f + minViewAngle, 0, 0);
-        }
+            if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minViewAngle)
+            {
+                pivot.rotation = Quaternion.Euler(360f + minViewAngle, 0, 0);
+            }
 
             //Move the camera based on the current rotation of the player
             float yAngle = target.eulerAngles.y;
-        float xAngle = pivot.eulerAngles.x;
+            float xAngle = pivot.eulerAngles.x;
 
-        Quaternion rotation = Quaternion.Euler(xAngle, yAngle, 0);
+            Quaternion rotation = Quaternion.Euler(xAngle, yAngle, 0);
 
-        transform.position = target.position - (rotation * offset);
+            transform.position = target.position - (rotation * offset);
 
-        //Lock the camera so it doesn't look under the floor
+            //Lock the camera so it doesn't look under the floor
 
-        if(transform.position.y < target.position.y)
-        {
-            transform.position = new Vector3(transform.position.x, target.position.y -.5f, transform.position.z);
+            if (transform.position.y < target.position.y)
+            {
+                transform.position = new Vector3(transform.position.x, target.position.y - .5f, transform.position.z);
+            }
+
+
+            // transform.position = target.position - offset;
+            transform.LookAt(target);
         }
-
-
-       // transform.position = target.position - offset;
-        transform.LookAt(target);
-
+        
     }
 }
