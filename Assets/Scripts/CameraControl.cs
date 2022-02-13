@@ -29,7 +29,7 @@ public class CameraControl : MonoBehaviour
         pivot.transform.position = target.transform.position;
         pivot.transform.parent = target.transform;
 
-       // Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class CameraControl : MonoBehaviour
         rb.velocity = rb.velocity.normalized * speed;
         rb.velocity = new Vector3(rb.velocity.x, yStore, rb.velocity.z); */
 
-
+            //Cursor.lockState = CursorLockMode.None;
 
             //get the x pos of the mouse
             float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
