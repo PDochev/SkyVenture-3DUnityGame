@@ -11,7 +11,7 @@ public class GameUI : MonoBehaviour
     public GameState currentState;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI lifeText;
-    public Image redKeyUI, blueKeyUI, YellowKeyUI;
+    public Image redKeyUI, blueKeyUI, yellowKeyUI;
     public GameObject allGameUI, mainMenuPanel, pauseMenuPanel, gameOverPanel, titleText,creditsPanel,creditsPanelGOver;
    
 
@@ -101,6 +101,15 @@ public class GameUI : MonoBehaviour
         titleText.SetActive(true);
     }
 
+    //public void CreditsCheckGameOver()
+    //{
+    //    allGameUI.SetActive(false);
+    //    mainMenuPanel.SetActive(false);
+    //    pauseMenuPanel.SetActive(false);
+    //    gameOverPanel.SetActive(true);
+    //    titleText.SetActive(true);
+    //}
+
    
 
 
@@ -152,6 +161,11 @@ public class GameUI : MonoBehaviour
         Application.Quit();
     }
 
+    //public void GoToGameOver()
+    //{
+    //    CheckGameState(GameState.GameOver);
+    //}
+
 
     public void Credits()
     {
@@ -159,11 +173,11 @@ public class GameUI : MonoBehaviour
 
     }
 
-    public void CreditsGameOver()
-    {
-        OpenPanelGameOver();
+    //public void CreditsGameOver()
+    //{
+    //    OpenPanelGameOver();
 
-    }
+    //}
 
 
     public void OpenPanel()
@@ -176,13 +190,40 @@ public class GameUI : MonoBehaviour
         }
     }
 
-    public void OpenPanelGameOver()
+    //public void OpenPanelGameOver()
+    //{
+    //    if (creditsPanelGOver != null)
+    //    {
+    //        bool isActive = creditsPanelGOver.activeSelf;
+    //        creditsPanelGOver.SetActive(!isActive);
+    //        CreditsCheckGameOver();
+    //    }
+    //}
+
+
+    public void UpdateCoins()
     {
-        if (creditsPanelGOver != null)
+        coinText.text = Manager3d.coins.ToString();
+    }
+
+    public void UpdateLives()
+    {
+        lifeText.text = Manager3d.lives.ToString();
+    }
+
+    public void UpdateKeys(Manager3d.DoorKeyColour keyColours)
+    {
+        switch (keyColours)
         {
-            bool isActive = creditsPanelGOver.activeSelf;
-            creditsPanelGOver.SetActive(!isActive);
-            CreditsCheck();
+            case Manager3d.DoorKeyColour.Red:
+                redKeyUI.GetComponent<Image>().color = Color.red;
+                break;
+            case Manager3d.DoorKeyColour.Blue:
+                blueKeyUI.GetComponent<Image>().color = Color.blue;
+                break;
+            case Manager3d.DoorKeyColour.Yellow:
+                yellowKeyUI.GetComponent<Image>().color = Color.yellow;
+                break;
         }
     }
 }

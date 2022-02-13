@@ -1670,7 +1670,7 @@ MonoBehaviour:
   lifeText: {fileID: 1530238368142622521}
   redKeyUI: {fileID: 1530238368026342901}
   blueKeyUI: {fileID: 1530238367343364375}
-  YellowKeyUI: {fileID: 1530238368015854684}
+  yellowKeyUI: {fileID: 1530238368015854684}
   allGameUI: {fileID: 4537388432170444934}
   mainMenuPanel: {fileID: 1530238367654144175}
   pauseMenuPanel: {fileID: 1996004166513940638}
@@ -2508,7 +2508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3714950591123171338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2824,7 +2824,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3104267378069642515}
         m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
-        m_MethodName: GameOver
+        m_MethodName: GoToGameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
