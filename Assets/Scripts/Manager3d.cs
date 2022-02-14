@@ -5,17 +5,17 @@ using UnityEngine;
 public class Manager3d : MonoBehaviour
 {
     public static Manager3d instance;
-    private static int coins;
+    public static int coins , lives;
 
     public enum DoorKeyColour { Red, Blue, Yellow };//these store the values of red blue and yellow and are variables
 
     public static bool redKey, blueKey, yellowKey; //these store whether the corresponding keys have been picked up or not
-
-
-
     public static Vector3 lastCheckPoint;
+    public static bool gamePaused;
 
-    public void OnAwake() {
+    static GameUI gameUI;
+
+    public void Awake() {
         if (instance == null)
         {
             instance = this;
@@ -27,14 +27,40 @@ public class Manager3d : MonoBehaviour
 
             Destroy(gameObject);
         }
+
+        gameUI = FindObjectOfType<GameUI>();
+        lives = 1;
+        coins = 0;
+        gameUI.UpdateCoins();
+        gameUI.UpdateLives();
+
+        //access new function in GameUi;     
     }
 
     public static void AddCoins(int coinValue)
     {
         coins += coinValue;
-        print("Coins = " + coins);
+        if(coins >= 100)
+        {
+            coins -= 100;
+            AddLives(1);
+        }
+        gameUI.UpdateCoins();
     }
 
+    public static void AddLives(int lifeValue)
+    {
+        lives += lifeValue;
+        if(lives < 0)
+        {
+            gameUI.CheckGameState(GameUI.GameState.GameOver);
+        }
+        else
+        {
+            gameUI.UpdateLives();
+        }
+
+    }
 
 
     public static void UpdateCheckpoints(GameObject post)
@@ -65,7 +91,8 @@ public class Manager3d : MonoBehaviour
 
         }
 
+        gameUI.UpdateKeys(keyColour);
 
-        print(keyColour + "key has been picked up");
+       // print(keyColour + "key has been picked up");
     }
 }

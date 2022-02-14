@@ -20,6 +20,10 @@ public class Coin : MonoBehaviour
 
     private void Update()
     {
-        transform.Rotate(0, rotateSpeed, 0, Space.World);
+        if (!Manager3d.gamePaused)
+        {
+            transform.Rotate(0, rotateSpeed, 0, Space.World);
+        }
+       
     }
 }

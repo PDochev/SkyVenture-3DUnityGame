@@ -17,7 +17,8 @@ public class Deadly : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            collision.gameObject.transform.position = Manager3d.lastCheckPoint; 
+            collision.gameObject.transform.position = Manager3d.lastCheckPoint;
+            Manager3d.AddLives(-1);
         }
     }
 }
