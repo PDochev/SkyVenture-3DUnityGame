@@ -9,6 +9,9 @@ public class KeyPickUp3D : MonoBehaviour
 
     Renderer rend;
 
+    public int rotateSpeed=1;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,11 @@ public class KeyPickUp3D : MonoBehaviour
         }
 
 
+    }
+
+    void Update()
+    {
+        transform.Rotate(0, rotateSpeed, 0, Space.World);
     }
 
     private void OnTriggerEnter(Collider collision)
