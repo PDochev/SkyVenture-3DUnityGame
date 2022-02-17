@@ -10,6 +10,7 @@ public class Manager3d : MonoBehaviour
     public enum DoorKeyColour { Red, Blue, Yellow };//these store the values of red blue and yellow and are variables
 
     public static bool redKey, blueKey, yellowKey; //these store whether the corresponding keys have been picked up or not
+    
     public static Vector3 lastCheckPoint;
     public static bool gamePaused;
 
@@ -93,6 +94,6 @@ public class Manager3d : MonoBehaviour
 
         gameUI.UpdateKeys(keyColour);
 
-       // print(keyColour + "key has been picked up");
+        print(keyColour + "key has been picked up");
     }
 }
