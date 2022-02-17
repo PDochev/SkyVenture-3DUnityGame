@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jump;
     [SerializeField] float fallMultiplier;
 
+    public float JumpPadForce;
 
     private  const int maxJump = 2; // this sets how many jumps we want for our player (currently 2 , so we can double jump) 
     private int currentJump = 0;
@@ -39,6 +40,11 @@ public class PlayerMove : MonoBehaviour
              gameObject.transform.parent = collision.gameObject.transform;
             //however the player must then detach from its new parent object, so a "OnCollisionExit" has been used below to detach the player from the moving platform when it is no longer in contact with it~~Karahan
 
+        }
+
+        if (collision.gameObject.tag == "JumpPad")
+        {
+            rb.AddForce(0, JumpPadForce, 0,ForceMode.Impulse);
         }
     }
 

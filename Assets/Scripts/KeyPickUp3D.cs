@@ -9,7 +9,7 @@ public class KeyPickUp3D : MonoBehaviour
 
     Renderer rend;
 
-    public int rotateSpeed=1;
+    public float rotateSpeed=1;
 
 
 
