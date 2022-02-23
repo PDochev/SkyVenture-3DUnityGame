@@ -6,10 +6,13 @@ public class PlayerMove : MonoBehaviour
 {
     private Vector3 playerMovement;
 
-    [SerializeField] private Rigidbody rb;
+    [SerializeField] public Rigidbody rb;
     [SerializeField] private float speed;
     [SerializeField] private float jump;
     [SerializeField] float fallMultiplier;
+    public LayerMask enemyLayer;
+
+    public PowerUp powerUp;
 
     public float JumpPadForce;
 
@@ -24,6 +27,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         Manager3d.lastCheckPoint = transform.position;
+        powerUp = powerUp.GetComponent<PowerUp>();
     }
 
 
@@ -38,6 +42,7 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.tag == "MovingPlatform")// this collision detects whether the player is colliding with a moving platform, if it is, it will make the player a child object of the moving platform so that the player moves together with the platform, instead of just falling off~~Karahan
         {
              gameObject.transform.parent = collision.gameObject.transform;
+            
             //however the player must then detach from its new parent object, so a "OnCollisionExit" has been used below to detach the player from the moving platform when it is no longer in contact with it~~Karahan
 
         }
@@ -46,9 +51,26 @@ public class PlayerMove : MonoBehaviour
         {
             rb.AddForce(0, JumpPadForce, 0,ForceMode.Impulse);
         }
+
+        //if (collision.gameObject.tag == "Enemy" && rb.velocity.y < 0f && playerOnGround == false) //&& jump < 0f && playerOnGround == false && collision.gameObject != null)
+        //{
+        //    collision.gameObject.GetComponent<EnemyAI>().TakeDamage(2);
+
+        //}
+
+
+        //if (collision.gameObject.tag == "EnemyTop")
+        //{
+        //    collision.gameObject.GetComponent<EnemyAI>().TakeDamage(2);
+        //    Manager3d.AddLives(1);
+
+        //}
+
+
+
     }
 
-    
+
 
     private void OnCollisionExit(Collision collision)
     {
@@ -65,7 +87,8 @@ public class PlayerMove : MonoBehaviour
         playerMovement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         playerMovement = playerMovement.normalized * speed;
         MovePlayer();
-
+        
+        
     }
 
     private void FixedUpdate()
@@ -78,10 +101,12 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private void MovePlayer()
+    public void MovePlayer()
     {
         Vector3 MoveVector = transform.TransformDirection(playerMovement) * speed;
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
+        
+       
 
         if (Input.GetButtonDown("Jump") && (playerOnGround || maxJump > currentJump)) // if our max jump is > 0 , then increment the current jump;
         {
@@ -89,5 +114,20 @@ public class PlayerMove : MonoBehaviour
             playerOnGround = false;
             currentJump++;
         }
+
+
+
+        if (Input.GetKey(KeyCode.Q) && powerUp.hasPower == true)
+        {
+
+            rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
+           // powerUp.hasPower = false;
+            
+
+        }
+
     }
+
+
+
 }
