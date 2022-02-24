@@ -6,18 +6,21 @@ public class PowerUp : MonoBehaviour
 {
     public bool hasPower = false;
     public int rotateSpeed;
+    public int timeUsed;
 
 
    public void Start()
     {
         hasPower = false;
+        //timeUsed = 0;
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Player" )
+        if (other.name == "Player")
         {
             hasPower = true;
+            
             Destroy(gameObject);
           
         }
@@ -29,6 +32,5 @@ public class PowerUp : MonoBehaviour
         {
             transform.Rotate(0, rotateSpeed, 0, Space.World);
         }
-
     }
 }

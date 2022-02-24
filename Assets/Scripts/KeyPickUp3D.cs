@@ -37,7 +37,11 @@ public class KeyPickUp3D : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, rotateSpeed, 0, Space.World);
+        if (!Manager3d.gamePaused)
+        {
+            transform.Rotate(0, rotateSpeed, 0, Space.World);
+        }
+            
     }
 
     private void OnTriggerEnter(Collider collision)

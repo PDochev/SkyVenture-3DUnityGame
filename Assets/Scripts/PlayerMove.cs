@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour
     private int currentJump = 0;
 
     public bool playerOnGround = true;
-
+    bool powerActivated;
 
     private void Start()
     {
@@ -28,6 +28,7 @@ public class PlayerMove : MonoBehaviour
 
         Manager3d.lastCheckPoint = transform.position;
         powerUp = powerUp.GetComponent<PowerUp>();
+        //powerUp.timeUsed = 100;
     }
 
 
@@ -59,12 +60,12 @@ public class PlayerMove : MonoBehaviour
         //}
 
 
-        //if (collision.gameObject.tag == "EnemyTop")
-        //{
-        //    collision.gameObject.GetComponent<EnemyAI>().TakeDamage(2);
-        //    Manager3d.AddLives(1);
-
-        //}
+        if (collision.gameObject.tag == "EnemyTop")
+        {
+            //collision.gameObject.GetComponent<EnemyAI>().TakeDamage(2);
+            //Manager3d.AddLives(1);
+            rb.AddForce(0, 5f, 0, ForceMode.Impulse);
+        }
 
 
 
@@ -88,7 +89,7 @@ public class PlayerMove : MonoBehaviour
         playerMovement = playerMovement.normalized * speed;
         MovePlayer();
         
-        
+
     }
 
     private void FixedUpdate()
@@ -116,15 +117,63 @@ public class PlayerMove : MonoBehaviour
         }
 
 
-
         if (Input.GetKey(KeyCode.Q) && powerUp.hasPower == true)
         {
 
-            rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
-           // powerUp.hasPower = false;
-            
+            rb.AddForce(transform.forward * 2f, ForceMode.Impulse);
+            //powerUp.timeUsed--;
+            //print(powerUp.timeUsed);
+
+
+            //if (powerUp.timeUsed <= 0)
+            //{
+            //    powerUp.hasPower = false;
+
+            //}
 
         }
+
+
+
+
+        //if (Input.GetKeyDown(KeyCode.Q) && powerUp.hasPower == true)
+        //{
+        //    //activate powr = true
+
+        //    powerActivated = true;
+
+        //    //rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
+        //    //// powerUp.hasPower = false;
+
+        //    //powerUp.timeUsed--;
+        //    //print(powerUp.timeUsed);
+
+
+        //    //if (powerUp.timeUsed <= 0)
+        //    //{
+        //    //    powerUp.hasPower = false;
+
+        //    //}
+
+        //}
+
+        //// if(activate power)
+        //if (powerActivated == true)
+        //{
+
+        //    rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
+        //    powerUp.timeUsed--;
+        //    print(powerUp.timeUsed);
+
+
+        //    if (powerUp.timeUsed <= 0)
+        //    {
+        //        powerUp.hasPower = false;
+        //        powerActivated = false;
+
+
+        //    }
+        //}
 
     }
 
