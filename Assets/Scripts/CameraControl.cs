@@ -30,6 +30,8 @@ public class CameraControl : MonoBehaviour
         pivot.transform.parent = target.transform;
 
         //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
     }
 
     // Update is called once per frame
@@ -44,6 +46,8 @@ public class CameraControl : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, yStore, rb.velocity.z); */
 
             //Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
+
 
             //get the x pos of the mouse
             float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
@@ -93,6 +97,11 @@ public class CameraControl : MonoBehaviour
 
             // transform.position = target.position - offset;
             transform.LookAt(target);
+        }
+
+        else
+        {
+            Cursor.visible = true;
         }
         
     }

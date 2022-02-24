@@ -9,15 +9,14 @@ public class Deadly : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.transform.position = Manager3d.lastCheckPoint;
-            Debug.Log("Dead");
             Manager3d.AddLives(-1);
 
         }
-    } 
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
             collision.gameObject.transform.position = Manager3d.lastCheckPoint;
             Manager3d.AddLives(-1);

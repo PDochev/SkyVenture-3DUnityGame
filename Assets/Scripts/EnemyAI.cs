@@ -10,6 +10,9 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
     public float health;
+    public float speed;
+    public GameObject pivot;
+  
 
     //Patroling
     public Vector3 walkPoint;
@@ -85,19 +88,26 @@ public class EnemyAI : MonoBehaviour
     {
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
-        transform.LookAt(player);
+
+        // empty child game object look at player
+        // transform.rotate based on the child's rotation on y and w
+        pivot.transform.LookAt(player);
+        gameObject.transform.rotation = new Quaternion(0f, pivot.transform.rotation.y, 0f, pivot.transform.rotation.w);
+
+
+       
 
         if (!alreadyAttacked)
         {
 
             //Attack Code here (shooting , etc)
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
 
+            // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+           
+            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);  
+            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-
-
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -114,7 +124,13 @@ public class EnemyAI : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+           
+            
+        }
+        //Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
 
