@@ -27,6 +27,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         Manager3d.lastCheckPoint = transform.position;
+        
         powerUp = powerUp.GetComponent<PowerUp>();
         //powerUp.timeUsed = 100;
     }
