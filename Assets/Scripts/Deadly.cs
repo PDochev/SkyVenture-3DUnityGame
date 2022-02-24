@@ -10,6 +10,8 @@ public class Deadly : MonoBehaviour
         {
             collision.transform.position = Manager3d.lastCheckPoint;
             Debug.Log("Dead");
+            Manager3d.AddLives(-1);
+
         }
     } 
 
