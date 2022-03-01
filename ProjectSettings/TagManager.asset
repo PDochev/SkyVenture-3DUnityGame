@@ -10,7 +10,6 @@ TagManager:
   - JumpPad
   - PowerUp
   - EnemyTop
-  - MAST_Holder
   layers:
   - Default
   - TransparentFX
