@@ -216,13 +216,13 @@ public class GameUI : MonoBehaviour
         switch (keyColours)
         {
             case Manager3d.DoorKeyColour.Red:
-                redKeyUI.GetComponent<Image>().color = Color.red;
+                redKeyUI.GetComponent<Image>().color = Color.white;
                 break;
             case Manager3d.DoorKeyColour.Blue:
-                blueKeyUI.GetComponent<Image>().color = Color.blue;
+                blueKeyUI.GetComponent<Image>().color = Color.white;
                 break;
             case Manager3d.DoorKeyColour.Yellow:
-                yellowKeyUI.GetComponent<Image>().color = Color.yellow;
+                yellowKeyUI.GetComponent<Image>().color = Color.white;
                 break;
         }
     }
