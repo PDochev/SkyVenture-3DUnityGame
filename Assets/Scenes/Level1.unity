@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7564,6 +7564,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3529534389453650306, guid: 2466b794dc300064aa2c5a5c984cc4a7, type: 3}
   m_PrefabInstance: {fileID: 350875662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2074072360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2567536576161584346, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+  m_PrefabInstance: {fileID: 1530238367990804657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2097028367
 GameObject:
   m_ObjectHideFlags: 0
@@ -8015,6 +8020,7 @@ GameObject:
   - component: {fileID: 1711813855591086984}
   - component: {fileID: 919132149200099934}
   - component: {fileID: 2001111057}
+  - component: {fileID: 919132149200099935}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: PowerUp
@@ -8035,6 +8041,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.041700818, y: 0.08369128, z: 0.0076437555}
   m_Center: {x: -0.005843113, y: 0.0014473982, z: 0.006229489}
+--- !u!114 &919132149200099935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149200099933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7591b0e9d15444f8297ec0157656e8e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerImage: {fileID: 2074072360}
 --- !u!1 &919132149464613704
 GameObject:
   m_ObjectHideFlags: 0
@@ -8077,6 +8096,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1530238368142622521, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f27a39d9ad814e389a20beec6b8b7d8, type: 2}
+    - target: {fileID: 1530238368142622521, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1500814255451638749, guid: 7f27a39d9ad814e389a20beec6b8b7d8, type: 2}
+    - target: {fileID: 1530238368748388782, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f27a39d9ad814e389a20beec6b8b7d8, type: 2}
+    - target: {fileID: 1530238368748388782, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1500814255451638749, guid: 7f27a39d9ad814e389a20beec6b8b7d8, type: 2}
     - target: {fileID: 1530238368925391750, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -8168,6 +8203,22 @@ PrefabInstance:
     - target: {fileID: 3262210396221929903, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
       propertyPath: m_text
       value: 'Go Away . '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784779032735240464, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f67305a393ff14c368fe70e429b6ef5c, type: 3}
+    - target: {fileID: 5784779032735240464, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784779032735240464, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784779032735240464, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}

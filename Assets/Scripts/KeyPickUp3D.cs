@@ -11,8 +11,7 @@ public class KeyPickUp3D : MonoBehaviour
 
     public float rotateSpeed=1;
 
-
-
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -51,8 +50,7 @@ public class KeyPickUp3D : MonoBehaviour
             Manager3d.KeyPickUp(keyColour);
 
             Destroy(gameObject);
-
-
+         
         }
     }
 }
