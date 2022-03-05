@@ -7,28 +7,21 @@ public class SwingingAxe : MonoBehaviour
 
     public bool changeDirection;
     
-    public float speedOfSwing;
+    public float timeTakenToGoNextPosition,speedOfSwing;
     
-    float lerpRotation, lerpRotation2;
+    [SerializeField] float lerpRotation, lerpRotation2;
    
     [SerializeField] Vector3 start, end;
-    public void Start()
-    {
-
-       
-        
-    }
-
-
+    
     void Update()
     {
-        if (lerpRotation >= speedOfSwing)
+        if (lerpRotation >= timeTakenToGoNextPosition)
         {
             changeDirection = false;
 
         }
 
-        if (lerpRotation2>=speedOfSwing)
+        if (lerpRotation2>= timeTakenToGoNextPosition)
         {
             changeDirection = true;
 
@@ -40,7 +33,7 @@ public class SwingingAxe : MonoBehaviour
             
             lerpRotation += speedOfSwing * Time.deltaTime;
             
-            gameObject.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(end), lerpRotation);
+            gameObject.transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(end), lerpRotation);
 
             lerpRotation2 = 0;
         }
@@ -49,7 +42,7 @@ public class SwingingAxe : MonoBehaviour
         {
             lerpRotation2 += speedOfSwing * Time.deltaTime;
             
-            gameObject.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(start), lerpRotation2);
+            gameObject.transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(start), lerpRotation2);
 
             lerpRotation = 0;
 
