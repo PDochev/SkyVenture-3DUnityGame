@@ -10,6 +10,8 @@ TagManager:
   - JumpPad
   - PowerUp
   - EnemyTop
+  - ShrinkPower
+  - FloatPower
   layers:
   - Default
   - TransparentFX

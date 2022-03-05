@@ -6,20 +6,26 @@ public class PlayerMove : MonoBehaviour
 {
     private Vector3 playerMovement;
 
-    [SerializeField] public Rigidbody rb;
-    [SerializeField] private float speed;
-    [SerializeField] private float jump;
-    [SerializeField] float fallMultiplier;
+   
+    
+    public Rigidbody rb;
+    
+    [SerializeField] private float speed, fallMultiplier, jump,dashSpeed,floatStrength;
+    
     public LayerMask enemyLayer;
 
     public PowerUp powerUp;
 
+    public FloatPower floatPower;
+
     public float JumpPadForce;
 
     private  const int maxJump = 2; // this sets how many jumps we want for our player (currently 2 , so we can double jump) 
+
     private int currentJump = 0;
 
     public bool playerOnGround = true;
+
     bool powerActivated;
 
     private void Start()
@@ -29,6 +35,9 @@ public class PlayerMove : MonoBehaviour
         Manager3d.lastCheckPoint = transform.position;
         
         powerUp = powerUp.GetComponent<PowerUp>();
+
+        floatPower = floatPower.GetComponent<FloatPower>();
+
         //powerUp.timeUsed = 100;
     }
 
@@ -68,6 +77,8 @@ public class PlayerMove : MonoBehaviour
             rb.AddForce(0, 5f, 0, ForceMode.Impulse);
         }
 
+        
+
 
 
     }
@@ -89,17 +100,38 @@ public class PlayerMove : MonoBehaviour
         playerMovement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         playerMovement = playerMovement.normalized * speed;
         MovePlayer();
-        
+
 
     }
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         if (rb.velocity.y < 0) //this checks whether the players rb y velocity is less than 0, if it is it would meaan the player is falling, which could also mean the player is falling after jump ~~Karahan
             
             // this if statement is what allows the player to have a better jump, by increasing the gravity on its "Vector3.y" when it is falling so it comes back down more quickly after jumping, instead of hovering around ~~ Karahan
         {
-            rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * fallMultiplier;
+            if (floatPower.currentlyFloating==true && floatPower.hasFloatPower == true) //this if statement is checking the FloatPower script to see whether the player is activating and whether the player has the power up
+            {
+                rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * 0.00001f ; //here it is slowing the speed of gravity increasing by multiplying by 0.00001
+
+                rb.AddForce(6, floatStrength, 0);  //to also give the effect of hovering/floating a bit of force is being added on the players y position, to try stop it from falling down straight away
+
+
+                if (rb.velocity.y < -8) //here it is checking if the vector of the rigidbody is falling down too quickly 
+                {
+                    rb.velocity=new Vector3(0,-2,0); //when the rigidbodies vector y is below -10, that means it is fallin gpretty quickly, so if is this if statement checks that and resets the vector y to -2, to stop it building up speed and going below -10.
+                }
+                Debug.Log(rb.velocity.y);
+
+                
+            }
+
+            else //this else statement is what triggers the players normal fall, so if the player is not activating float power and is does not have the float ability do the code above, ELSE trigger this normal falling speed.
+            {
+                rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * fallMultiplier;
+                
+            }
+            
         }
     }
 
@@ -121,63 +153,70 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.Q) && powerUp.hasPower == true)
         {
 
-            rb.AddForce(transform.forward * 2f, ForceMode.Impulse);
-            //powerUp.timeUsed--;
-            //print(powerUp.timeUsed);
+            rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
+            /*powerUp.timeUsed--;
+            print(powerUp.timeUsed);
 
 
-            //if (powerUp.timeUsed <= 0)
-            //{
-            //    powerUp.hasPower = false;
+            if (powerUp.timeUsed <= 0)
+            {
+                powerUp.hasPower = false;
 
-            //}
+            }
+            */
 
         }
 
 
 
 
-        //if (Input.GetKeyDown(KeyCode.Q) && powerUp.hasPower == true)
-        //{
-        //    //activate powr = true
 
-        //    powerActivated = true;
+        /*
+        if (Input.GetKeyDown(KeyCode.Q) && powerUp.hasPower == true)
+        {
+            //activate powr = true
 
-        //    //rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
-        //    //// powerUp.hasPower = false;
+            powerActivated = true;
 
-        //    //powerUp.timeUsed--;
-        //    //print(powerUp.timeUsed);
+            rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
+             powerUp.hasPower = false;
 
-
-        //    //if (powerUp.timeUsed <= 0)
-        //    //{
-        //    //    powerUp.hasPower = false;
-
-        //    //}
-
-        //}
-
-        //// if(activate power)
-        //if (powerActivated == true)
-        //{
-
-        //    rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
-        //    powerUp.timeUsed--;
-        //    print(powerUp.timeUsed);
+              powerUp.timeUsed--;
+              print(powerUp.timeUsed);
 
 
-        //    if (powerUp.timeUsed <= 0)
-        //    {
-        //        powerUp.hasPower = false;
-        //        powerActivated = false;
+              if (powerUp.timeUsed <= 0)
+              {
+        powerUp.hasPower = false;
+        }
+
+        }
+
+         if(activate power)
+        if (powerActivated == true)
+        {
+
+              rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
+            powerUp.timeUsed--;
+           print(powerUp.timeUsed);
 
 
-        //    }
-        //}
+            if (powerUp.timeUsed <= 0)
+            {
+                powerUp.hasPower = false;
+                powerActivated = false;
+
+
+            }
+        } */
+
+        
 
     }
 
+    
+
+    
 
 
 }
