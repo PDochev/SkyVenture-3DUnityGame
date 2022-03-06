@@ -18,6 +18,7 @@ public class CheckPoint : MonoBehaviour
        if(collision.tag == "Player")
         {
             Manager3d.UpdateCheckpoints(gameObject);
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Checkpoint, transform.position, 1f);
         } 
     } 
 

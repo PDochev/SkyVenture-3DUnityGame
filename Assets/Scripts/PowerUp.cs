@@ -20,7 +20,8 @@ public class PowerUp : MonoBehaviour
         if (other.name == "Player")
         {
             hasPower = true;
-            
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Power, transform.position, 0.5f);
+
             Destroy(gameObject);
           
         }

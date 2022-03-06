@@ -48,6 +48,7 @@ public class KeyPickUp3D : MonoBehaviour
         if (collision.tag == "Player")
         {
             Manager3d.KeyPickUp(keyColour);
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.PickupKey, transform.position, 1f);
 
             Destroy(gameObject);
          

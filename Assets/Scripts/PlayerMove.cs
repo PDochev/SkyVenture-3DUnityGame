@@ -28,6 +28,10 @@ public class PlayerMove : MonoBehaviour
 
     bool powerActivated;
 
+    public AudioManager am;
+    float sinceLastFootsteps;
+    float timeBetwenFootsteps = 0.5f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -37,6 +41,8 @@ public class PlayerMove : MonoBehaviour
         powerUp = powerUp.GetComponent<PowerUp>();
 
         floatPower = floatPower.GetComponent<FloatPower>();
+
+        am = FindObjectOfType<AudioManager>();
 
         //powerUp.timeUsed = 100;
     }
@@ -61,6 +67,7 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.tag == "JumpPad")
         {
             rb.AddForce(0, JumpPadForce, 0,ForceMode.Impulse);
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Bounce, transform.position, 1f);
         }
 
         //if (collision.gameObject.tag == "Enemy" && rb.velocity.y < 0f && playerOnGround == false) //&& jump < 0f && playerOnGround == false && collision.gameObject != null)
@@ -99,6 +106,7 @@ public class PlayerMove : MonoBehaviour
 
         playerMovement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         playerMovement = playerMovement.normalized * speed;
+        
         MovePlayer();
 
 
@@ -140,12 +148,13 @@ public class PlayerMove : MonoBehaviour
         Vector3 MoveVector = transform.TransformDirection(playerMovement) * speed;
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
         
-       
+
 
         if (Input.GetButtonDown("Jump") && (playerOnGround || maxJump > currentJump)) // if our max jump is > 0 , then increment the current jump;
         {
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);
             currentJump++;
         }
 
@@ -154,6 +163,7 @@ public class PlayerMove : MonoBehaviour
         {
 
             rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
+            //FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Dash, transform.position, 1f);
             /*powerUp.timeUsed--;
             print(powerUp.timeUsed);
 
@@ -166,6 +176,23 @@ public class PlayerMove : MonoBehaviour
             */
 
         }
+
+        sinceLastFootsteps += Time.deltaTime;
+        if(MoveVector.x != 0f && playerOnGround == true)
+        {
+            if(sinceLastFootsteps > timeBetwenFootsteps)
+            {
+                sinceLastFootsteps = 0f;
+                am.AudioTrigger(AudioManager.SoundFXCat.FootStepGrass, transform.position, 1f);
+            }
+        }
+
+        //if(playerOnGround && rb.velocity.y >= 0f)
+        //{
+           
+        //        am.AudioTrigger(AudioManager.SoundFXCat.HitGround, transform.position, 1f);
+           
+        //}
 
 
 

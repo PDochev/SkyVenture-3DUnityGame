@@ -13,7 +13,9 @@ public class Heart : MonoBehaviour
         if (collision.tag == "Player")
         {
            // Instantiate(effect, transform.position, Quaternion.identity);
+
             Manager3d.AddLives(1);
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Lives, transform.position, 1f);
             Destroy(gameObject);
         }
     }
