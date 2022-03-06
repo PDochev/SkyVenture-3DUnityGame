@@ -40,6 +40,7 @@ public class ShrinkAbility : MonoBehaviour
         {
 
             transformed = !transformed;
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Shrink, transform.position, 0.6f);
             particle.Play();
         }
 
@@ -63,6 +64,7 @@ public class ShrinkAbility : MonoBehaviour
             lerpPosition2 += Time.deltaTime * transformSpeed;
 
             transform.localScale = Vector3.Lerp(grownSize, shrinkSize, lerpPosition2);
+            
         }
 
         lerpPosition1 = 0;
@@ -77,6 +79,7 @@ public class ShrinkAbility : MonoBehaviour
         {
             lerpPosition1 += Time.deltaTime * transformSpeed;
             transform.localScale = Vector3.Lerp(shrinkSize, grownSize, lerpPosition1);
+            
         }
 
         lerpPosition2 = 0;
@@ -87,6 +90,7 @@ public class ShrinkAbility : MonoBehaviour
         if (collision.gameObject.tag == "ShrinkPower")
         {
             hasShrinkPower = true;
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Power, transform.position, 0.5f);
             Destroy(collision.gameObject);
         }
     }

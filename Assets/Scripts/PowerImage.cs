@@ -26,4 +26,12 @@ public class PowerImage : MonoBehaviour
             powerImage.SetActive(true);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            powerImage.SetActive(true);
+        }
+    }
 }

@@ -14,6 +14,7 @@ public class Coin : MonoBehaviour
         {
 
             Manager3d.AddCoins(coinValue);
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.PickupCoin, transform.position, 0.5f);
             Destroy(gameObject);
         }   
     }

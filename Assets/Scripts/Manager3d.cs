@@ -15,6 +15,11 @@ public class Manager3d : MonoBehaviour
     public static bool gamePaused;
 
     static GameUI gameUI;
+    
+
+
+    
+
 
     public void Awake() {
         if (instance == null)
@@ -49,10 +54,17 @@ public class Manager3d : MonoBehaviour
         gameUI.UpdateCoins();
     }
 
+    
+
     public static void AddLives(int lifeValue)
     {
         lives += lifeValue;
-        if(lives < 0)
+        if(lifeValue == -1)
+        {
+            //FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Death, Vector3.zero, 1f);
+
+        }
+        if (lives < 0)
         {
             gameUI.CheckGameState(GameUI.GameState.GameOver);
         }

@@ -36,6 +36,7 @@ public class FloatPower : MonoBehaviour
         if (collision.gameObject.tag == "FloatPower")
         {
             hasFloatPower = true;
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Power, transform.position, 0.5f);
             Destroy(collision.gameObject);
 
         }

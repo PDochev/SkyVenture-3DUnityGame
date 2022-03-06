@@ -37,17 +37,30 @@ public class Door3D : MonoBehaviour
     {
         if (collision.tag == "Player" && doorLock != null)
         {
+           
             switch (keyColour)
             {
                 case Manager3d.DoorKeyColour.Red:
-                    if (Manager3d.redKey) Destroy(doorLock);
+                    if (Manager3d.redKey)
+                    {
+                        FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.OpenDoor, transform.position, 1f);
+                        Destroy(doorLock);
+                    }
                     break;
                 case Manager3d.DoorKeyColour.Blue:
-                    if (Manager3d.blueKey) Destroy(doorLock);
+                    if (Manager3d.blueKey)
+                    {
+                        FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.OpenDoor, transform.position, 1f);
+                        Destroy(doorLock);
+                    }
 
                     break;
                 case Manager3d.DoorKeyColour.Yellow:
-                    if (Manager3d.yellowKey) Destroy(doorLock);
+                    if (Manager3d.yellowKey)
+                    {
+                        FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.OpenDoor, transform.position, 1f);
+                        Destroy(doorLock);
+                    }
 
                     break;
 

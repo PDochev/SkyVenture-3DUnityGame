@@ -9,6 +9,8 @@ public class Deadly : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.transform.position = Manager3d.lastCheckPoint;
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Death, transform.position, 1f);
+
             Manager3d.AddLives(-1);
 
         }
@@ -19,6 +21,7 @@ public class Deadly : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.gameObject.transform.position = Manager3d.lastCheckPoint;
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Death, transform.position, 1f);
             Manager3d.AddLives(-1);
         }
     }

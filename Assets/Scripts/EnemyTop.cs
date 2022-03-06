@@ -30,6 +30,7 @@ public class EnemyTop : MonoBehaviour
         {
             foreach (Transform child in transform)
                 child.gameObject.SetActive(false);
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Squish, transform.position, 1f);
             Destroy(transform.parent.gameObject);
             Manager3d.AddCoins(5);
 
