@@ -6,9 +6,10 @@ public class Deadly : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.tag ==("Player"))
         {
             collision.transform.position = Manager3d.lastCheckPoint;
+            collision.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             Manager3d.AddLives(-1);
 
         }
@@ -16,9 +17,11 @@ public class Deadly : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.transform.position = Manager3d.lastCheckPoint;
+            collision.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
             Manager3d.AddLives(-1);
         }
     }

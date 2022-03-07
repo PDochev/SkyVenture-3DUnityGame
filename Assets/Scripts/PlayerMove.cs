@@ -114,7 +114,7 @@ public class PlayerMove : MonoBehaviour
             {
                 rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * 0.00001f ; //here it is slowing the speed of gravity increasing by multiplying by 0.00001
 
-                rb.AddForce(6, floatStrength, 0);  //to also give the effect of hovering/floating a bit of force is being added on the players y position, to try stop it from falling down straight away
+                rb.AddForce(0, floatStrength, 0);  //to also give the effect of hovering/floating a bit of force is being added on the players y position, to try stop it from falling down straight away
 
 
                 if (rb.velocity.y < -8) //here it is checking if the vector of the rigidbody is falling down too quickly 
@@ -129,6 +129,12 @@ public class PlayerMove : MonoBehaviour
             else //this else statement is what triggers the players normal fall, so if the player is not activating float power and is does not have the float ability do the code above, ELSE trigger this normal falling speed.
             {
                 rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * fallMultiplier;
+
+                if (rb.velocity.y < -40)
+                {
+                    rb.velocity = new Vector3(0, -35, 0);
+
+                }
                 
             }
             

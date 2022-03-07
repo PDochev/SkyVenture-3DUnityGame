@@ -20,6 +20,7 @@ public class DeadlyEnemy : MonoBehaviour
 
         {
             collision.transform.position = Manager3d.lastCheckPoint;
+            collision.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             Manager3d.AddLives(-1);
 
         }
