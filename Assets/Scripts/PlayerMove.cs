@@ -18,11 +18,15 @@ public class PlayerMove : MonoBehaviour
 
     public FloatPower floatPower;
 
+    //public DoubleJump doubleJump;
+
     public float JumpPadForce;
 
     private  const int maxJump = 2; // this sets how many jumps we want for our player (currently 2 , so we can double jump) 
 
     private int currentJump = 0;
+
+    public bool hasJumpingAbility;
 
     public bool playerOnGround = true;
 
@@ -40,9 +44,12 @@ public class PlayerMove : MonoBehaviour
         
         powerUp = powerUp.GetComponent<PowerUp>();
 
+        //doubleJump = doubleJump.GetComponent<DoubleJump>();
         floatPower = floatPower.GetComponent<FloatPower>();
 
         am = FindObjectOfType<AudioManager>();
+
+    
 
         //powerUp.timeUsed = 100;
     }
@@ -83,10 +90,6 @@ public class PlayerMove : MonoBehaviour
             //Manager3d.AddLives(1);
             rb.AddForce(0, 5f, 0, ForceMode.Impulse);
         }
-
-        
-
-
 
     }
 
@@ -147,15 +150,25 @@ public class PlayerMove : MonoBehaviour
     {
         Vector3 MoveVector = transform.TransformDirection(playerMovement) * speed;
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
-        
 
 
-        if (Input.GetButtonDown("Jump") && (playerOnGround || maxJump > currentJump)) // if our max jump is > 0 , then increment the current jump;
+
+
+
+        if (Input.GetButtonDown("Jump") && (playerOnGround || maxJump > currentJump) && hasJumpingAbility == true) // if our max jump is > 0 , then increment the current jump;
         {
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
             FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);
             currentJump++;
+        }
+
+        if (Input.GetButtonDown("Jump") && playerOnGround && hasJumpingAbility == false) // if our max jump is > 0 , then increment the current jump;
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
+            playerOnGround = false;
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);
+           
         }
 
 
