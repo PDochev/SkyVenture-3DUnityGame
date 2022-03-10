@@ -44,7 +44,7 @@ public class PlayerMove : MonoBehaviour
 
         am = FindObjectOfType<AudioManager>();
 
-        //powerUp.timeUsed = 100;
+        powerUp.timeUsed = 100;
     }
 
 
@@ -159,23 +159,23 @@ public class PlayerMove : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.Q) && powerUp.hasPower == true)
-        {
+        //if (Input.GetKey(KeyCode.Q) && powerUp.hasPower == true)
+        //{
 
-            rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
-            //FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Dash, transform.position, 1f);
-            /*powerUp.timeUsed--;
-            print(powerUp.timeUsed);
+        //    rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
+        //    //FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Dash, transform.position, 1f);
+        //    /*powerUp.timeUsed--;
+        //    print(powerUp.timeUsed);
 
 
-            if (powerUp.timeUsed <= 0)
-            {
-                powerUp.hasPower = false;
+        //    if (powerUp.timeUsed <= 0)
+        //    {
+        //        powerUp.hasPower = false;
 
-            }
-            */
+        //    }
+        //    */
 
-        }
+        //}
 
         sinceLastFootsteps += Time.deltaTime;
         if(MoveVector.x != 0f && playerOnGround == true)
@@ -189,43 +189,48 @@ public class PlayerMove : MonoBehaviour
 
         //if(playerOnGround && rb.velocity.y >= 0f)
         //{
-           
+
         //        am.AudioTrigger(AudioManager.SoundFXCat.HitGround, transform.position, 1f);
-           
+
         //}
 
 
 
 
 
-        /*
+        
         if (Input.GetKeyDown(KeyCode.Q) && powerUp.hasPower == true)
         {
             //activate powr = true
 
             powerActivated = true;
 
-            rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
-             powerUp.hasPower = false;
+        //    rb.AddForce(transform.forward * dashSpeed, ForceMode.Impulse);
+        //     //powerUp.hasPower = false;
 
-              powerUp.timeUsed--;
-              print(powerUp.timeUsed);
+        //      powerUp.timeUsed--;
+        //      print(powerUp.timeUsed);
 
 
-              if (powerUp.timeUsed <= 0)
-              {
-        powerUp.hasPower = false;
+        //      if (powerUp.timeUsed <= 0)
+        //      {
+        //powerUp.hasPower = false;
+        //}
+
         }
 
+        if (Input.GetKeyUp(KeyCode.Q) && powerUp.hasPower == true)
+        {
+            powerActivated = false;
         }
 
-         if(activate power)
-        if (powerActivated == true)
+
+            if (powerActivated == true)
         {
 
-              rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 5f, ForceMode.Impulse);
             powerUp.timeUsed--;
-           print(powerUp.timeUsed);
+            print(powerUp.timeUsed);
 
 
             if (powerUp.timeUsed <= 0)
@@ -234,16 +239,17 @@ public class PlayerMove : MonoBehaviour
                 powerActivated = false;
 
 
-            }
-        } */
 
-        
+            }
+        }
+
+
 
     }
 
-    
 
-    
+
+
 
 
 }
