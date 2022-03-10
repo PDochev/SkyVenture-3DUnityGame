@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShrinkAbility : MonoBehaviour
 {
 
-    bool hasShrinkPower ,transformed =  true;
+    public bool hasShrinkPower ,transformed = false;
 
     [SerializeField] Vector3 shrinkSize, grownSize;
 
@@ -13,12 +13,12 @@ public class ShrinkAbility : MonoBehaviour
 
     [SerializeField] float transformSpeed;
 
-     [SerializeField] ParticleSystem particle;
+    [SerializeField] ParticleSystem particle;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        transformed = false;
     }
 
     // Update is called once per frame
