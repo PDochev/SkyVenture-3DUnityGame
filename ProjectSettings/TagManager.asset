@@ -12,6 +12,7 @@ TagManager:
   - EnemyTop
   - ShrinkPower
   - FloatPower
+  - JumpPower
   layers:
   - Default
   - TransparentFX
