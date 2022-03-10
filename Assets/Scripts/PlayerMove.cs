@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
 
     private int currentJump = 0;
 
-    public bool playerOnGround = true;
+    public bool playerOnGround = true, doubleJumpAbility;
 
     bool powerActivated;
 
@@ -149,14 +149,28 @@ public class PlayerMove : MonoBehaviour
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
         
 
+        
 
-        if (Input.GetButtonDown("Jump") && (playerOnGround || maxJump > currentJump)) // if our max jump is > 0 , then increment the current jump;
+        if (Input.GetButtonDown("Jump") && (playerOnGround || maxJump > currentJump) && doubleJumpAbility==true) // if our max jump is > 0 , then increment the current jump;
         {
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
             FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);
             currentJump++;
+
+            Debug.Log(" i am double jumping");
         }
+
+        if (Input.GetButtonDown("Jump") && playerOnGround && doubleJumpAbility==false ) 
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
+            playerOnGround = false;
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);
+
+            Debug.Log(" i am single jumping");
+        }
+
+
 
 
         if (Input.GetKey(KeyCode.Q) && powerUp.hasPower == true)
