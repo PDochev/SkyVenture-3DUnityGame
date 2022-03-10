@@ -137,7 +137,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5262117254532511961, guid: 0064cb2066021c04aa8a21631083a644, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen2
       objectReference: {fileID: 0}
     - target: {fileID: 6157554438337666839, guid: 0064cb2066021c04aa8a21631083a644, type: 3}
       propertyPath: m_RootOrder
@@ -552,7 +552,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -608,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -941,7 +941,7 @@ Transform:
   - {fileID: 333487217}
   - {fileID: 293951408}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &184401176
 PrefabInstance:
@@ -952,7 +952,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3219725699624900779, guid: eac86f704082e7f4db974c6f030af0f3, type: 3}
       propertyPath: m_RootOrder
-      value: 57
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 3219725699624900779, guid: eac86f704082e7f4db974c6f030af0f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -996,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7132996614549668498, guid: eac86f704082e7f4db974c6f030af0f3, type: 3}
       propertyPath: m_Name
-      value: Pillar Plamen
+      value: Pillar 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eac86f704082e7f4db974c6f030af0f3, type: 3}
@@ -1287,7 +1287,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 280038962431971201, guid: c6c7cb32bfbea62409893618a63ea1a5, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 280038962431971201, guid: c6c7cb32bfbea62409893618a63ea1a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1406,7 +1406,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -1462,7 +1462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -1572,7 +1572,7 @@ Transform:
   - {fileID: 558944440}
   - {fileID: 562943352}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &293951406
 GameObject:
@@ -1885,7 +1885,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1941,7 +1941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9080781804510527278, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_Name
-      value: FencePlamen
+      value: FencePlamen28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
@@ -2199,7 +2199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2255,7 +2255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9080781804510527278, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_Name
-      value: FencePlamen
+      value: FencePlamen26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
@@ -2268,7 +2268,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -2324,7 +2324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -2337,7 +2337,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_RootOrder
-      value: 53
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2393,7 +2393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9080781804510527278, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_Name
-      value: FencePlamen
+      value: FencePlamen3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
@@ -2406,7 +2406,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2462,7 +2462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9080781804510527278, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_Name
-      value: FencePlamen
+      value: FencePlamen27
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
@@ -2488,7 +2488,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -2544,7 +2544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -2737,7 +2737,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -2793,7 +2793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -2902,7 +2902,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -2958,7 +2958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -2971,7 +2971,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 58
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -3027,7 +3027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: Cube Plamen
+      value: Cube Plamen32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -3440,7 +3440,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -3496,7 +3496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -4271,7 +4271,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -4327,7 +4327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -4810,7 +4810,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3219725699624900779, guid: eac86f704082e7f4db974c6f030af0f3, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3219725699624900779, guid: eac86f704082e7f4db974c6f030af0f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4896,7 +4896,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -4952,7 +4952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -5035,7 +5035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7001219152208435297, guid: f4e83ab47cf67724884d8e047cb6fe45, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7001219152208435297, guid: f4e83ab47cf67724884d8e047cb6fe45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5200,7 +5200,7 @@ Transform:
   m_Children:
   - {fileID: 1070011970}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &887447492
 MonoBehaviour:
@@ -5360,7 +5360,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 55
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -5416,7 +5416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: Cube Plamen
+      value: Cube Plamen3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -10797,7 +10797,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -10853,7 +10853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -11113,7 +11113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8016479220782692190, guid: d58526225c055c64096c48de27986ac9, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8016479220782692190, guid: d58526225c055c64096c48de27986ac9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11166,7 +11166,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -11222,7 +11222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -11620,7 +11620,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -11676,7 +11676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -11867,7 +11867,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_RootOrder
-      value: 54
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_LocalScale.x
@@ -11923,7 +11923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9080781804510527278, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_Name
-      value: FencePlamen
+      value: FencePlamen5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
@@ -12365,7 +12365,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -12421,7 +12421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -12493,7 +12493,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_LocalScale.x
@@ -12549,7 +12549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9080781804510527278, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_Name
-      value: FencePlamen
+      value: FencePlamen30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
@@ -12676,7 +12676,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -12732,7 +12732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -12801,7 +12801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -12980,7 +12980,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -13036,7 +13036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -13049,7 +13049,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -13105,7 +13105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -13151,7 +13151,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -13207,7 +13207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -13334,7 +13334,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_LocalScale.x
@@ -13390,7 +13390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9080781804510527278, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_Name
-      value: FencePlamen
+      value: fence 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
@@ -13669,7 +13669,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3074131993627819221, guid: f43d13590e82c10488f665f522ec94a0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3074131993627819221, guid: f43d13590e82c10488f665f522ec94a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13787,7 +13787,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5262117254532511961, guid: 0064cb2066021c04aa8a21631083a644, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen4
       objectReference: {fileID: 0}
     - target: {fileID: 6157554438337666839, guid: 0064cb2066021c04aa8a21631083a644, type: 3}
       propertyPath: m_RootOrder
@@ -14001,7 +14001,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 56
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -14057,7 +14057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: Cube Plamen
+      value: Cube Plamen4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -14074,7 +14074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6157554438337666839, guid: 0064cb2066021c04aa8a21631083a644, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6157554438337666839, guid: 0064cb2066021c04aa8a21631083a644, type: 3}
       propertyPath: m_LocalScale.y
@@ -14275,7 +14275,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -14331,7 +14331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -14488,7 +14488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: cube3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -14965,11 +14965,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5262117254532511961, guid: 0064cb2066021c04aa8a21631083a644, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: cube8
       objectReference: {fileID: 0}
     - target: {fileID: 6157554438337666839, guid: 0064cb2066021c04aa8a21631083a644, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6157554438337666839, guid: 0064cb2066021c04aa8a21631083a644, type: 3}
       propertyPath: m_LocalScale.y
@@ -15026,7 +15026,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 8504222551915343430, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_LocalScale.x
@@ -15082,7 +15082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9080781804510527278, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
       propertyPath: m_Name
-      value: FencePlamen
+      value: FencePlamen29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442c790b3706bbc49aedeac382fd229b, type: 3}
@@ -15315,7 +15315,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 4324846624646395619, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_LocalScale.x
@@ -15371,7 +15371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041693350374895721, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
       propertyPath: m_Name
-      value: CubePlamen
+      value: CubePlamen14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d006c0e2bf5b28442b8683b73ce91c69, type: 3}
@@ -17619,5 +17619,5 @@ Transform:
   m_LocalScale: {x: 18.580378, y: 18.580383, z: 18.58038}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
