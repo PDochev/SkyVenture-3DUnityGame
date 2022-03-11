@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7399904795555413679}
   - component: {fileID: 886385520645681995}
   - component: {fileID: 5182342544854700751}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.157
   m_TagString: Ground
   m_Icon: {fileID: 0}
