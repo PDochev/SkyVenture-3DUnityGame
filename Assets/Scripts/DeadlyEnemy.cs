@@ -20,6 +20,7 @@ public class DeadlyEnemy : MonoBehaviour
 
         {
             collision.transform.position = Manager3d.lastCheckPoint;
+            collision.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Death, transform.position, 1f);
             Manager3d.AddLives(-1);
 

@@ -140,6 +140,10 @@ public class PlayerMove : MonoBehaviour
             else //this else statement is what triggers the players normal fall, so if the player is not activating float power and is does not have the float ability do the code above, ELSE trigger this normal falling speed.
             {
                 rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * fallMultiplier;
+                if(rb.velocity.y < -35)
+                {
+                    rb.velocity = new Vector3(0, -20, 0);
+                }
                 
             }
             
