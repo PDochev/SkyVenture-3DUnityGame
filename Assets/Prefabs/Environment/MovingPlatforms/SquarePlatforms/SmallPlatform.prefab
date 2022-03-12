@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7852306316599619867}
   - component: {fileID: 4390609363765807591}
   - component: {fileID: 177591046160628172}
+  - component: {fileID: -460989139416319954}
   m_Layer: 0
   m_Name: SmallPlatform
   m_TagString: MovingPlatform
@@ -97,3 +98,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5053925668127403250, guid: 650ff80555cf01243a1a0e3a2d5a6004, type: 3}
+--- !u!114 &-460989139416319954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177591046160628163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ab815f8b47b294b8e3cc25982112d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPoint: {fileID: 0}
+  secondPoint: {fileID: 0}
+  moveSpeed: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     public bool hasPower = false;
-    public int rotateSpeed;
+    public float rotateSpeed;
     public int timeUsed;
 
 
