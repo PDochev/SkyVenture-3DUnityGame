@@ -6,7 +6,7 @@ public class DoubleJump : MonoBehaviour
 {
 
     
-    public int rotateSpeed;
+    public float rotateSpeed;
     public PlayerMove pm;
 
 
