@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7267013407891035673}
   - component: {fileID: 2478594829798841900}
   - component: {fileID: 2478594829798841901}
+  - component: {fileID: -893133879091961702}
+  - component: {fileID: 1519693694586904369}
   m_Layer: 0
   m_Name: LargeRollingSpikes
   m_TagString: Untagged
@@ -114,3 +116,27 @@ CapsuleCollider:
   m_Height: 16.56
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-893133879091961702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2478594829798841902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608690b3532e34587b985f633a292f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1519693694586904369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2478594829798841902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e3f602ccda646bdabce411732345d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

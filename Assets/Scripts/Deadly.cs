@@ -15,6 +15,7 @@ public class Deadly : MonoBehaviour
             Manager3d.AddLives(-1);
 
         }
+
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -27,4 +28,6 @@ public class Deadly : MonoBehaviour
             Manager3d.AddLives(-1);
         }
     }
+
+   
 }

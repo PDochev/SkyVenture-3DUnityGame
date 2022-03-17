@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public enum SoundFXCat { FootStepGrass, FootStepWood, Jump, Death, HitGround, HitCeiling, Checkpoint, Squish, OpenDoor, PickupKey, PickupCoin, Power, Lives, Bounce, Shrink, Dash}
+    public enum SoundFXCat { FootStepGrass, FootStepWood, Jump, Death, HitGround, HitCeiling, Checkpoint, Squish, OpenDoor, PickupKey, PickupCoin, Power, Lives, Bounce, Shrink, Dash , Star}
     public GameObject audioObject;
     public AudioClip[] footSteps;
     public AudioClip[] ladderSteps;
@@ -22,6 +22,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] bounce;
     public AudioClip[] shrink;
     public AudioClip[] dash;
+    public AudioClip[] star;
+
 
 
     public void AudioTrigger(SoundFXCat audioType, Vector3 audioPosition, float volume)
@@ -77,6 +79,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case (SoundFXCat.Dash):
                 ca.myClip = dash[Random.Range(0, dash.Length)];
+                break;
+            case (SoundFXCat.Star):
+                ca.myClip = star[Random.Range(0, star.Length)];
                 break;
         }
         ca.volume = volume;

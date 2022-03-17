@@ -13,6 +13,7 @@ TagManager:
   - ShrinkPower
   - FloatPower
   - JumpPower
+  - RollTrap
   layers:
   - Default
   - TransparentFX
