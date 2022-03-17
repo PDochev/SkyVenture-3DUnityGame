@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.SceneManagement;
 
 public class Manager3d : MonoBehaviour
 {
     public static Manager3d instance;
-    public static int coins , lives;
+    public static int coins , lives , stars;
 
     public enum DoorKeyColour { Red, Blue, Yellow };//these store the values of red blue and yellow and are variables
 
@@ -37,6 +38,7 @@ public class Manager3d : MonoBehaviour
         gameUI = FindObjectOfType<GameUI>();
         lives = 1;
         coins = 0;
+        stars = 0;
         gameUI.UpdateCoins();
         gameUI.UpdateLives();
 
@@ -52,6 +54,28 @@ public class Manager3d : MonoBehaviour
             AddLives(1);
         }
         gameUI.UpdateCoins();
+    }
+
+    public static void AddStars(int starsValue)
+    {
+        stars += starsValue;
+        print(stars);
+        if(stars == 20)
+        {
+
+            // gameUI.CheckGameState(GameUI.GameState.GameOver);
+            
+             Application.LoadLevel("MainMenu");
+            //SceneManager.LoadScene("MainMenu");
+            
+;
+
+        }
+        else
+        {
+            gameUI.UpdateStars();
+        }
+
     }
 
     

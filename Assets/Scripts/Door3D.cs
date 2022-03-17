@@ -14,7 +14,7 @@ public class Door3D : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        doorLock = transform.Find("Cube").gameObject;
+        doorLock = transform.Find("Gates").gameObject;
         
         Renderer doorColour=doorLock.GetComponent<Renderer>();
 
