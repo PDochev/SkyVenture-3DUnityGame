@@ -6,8 +6,9 @@ public class PlayerMove : MonoBehaviour
 {
     private Vector3 playerMovement;
 
-   
-    
+    private Vector3 MoveVector;
+
+
     public Rigidbody rb;
     
     [SerializeField] private float speed, fallMultiplier, jump,dashSpeed,floatStrength;
@@ -15,6 +16,8 @@ public class PlayerMove : MonoBehaviour
     public LayerMask enemyLayer;
 
     public PowerUp powerUp;
+
+    [SerializeField] private Animator anim;
 
     public FloatPower floatPower;
 
@@ -49,7 +52,9 @@ public class PlayerMove : MonoBehaviour
 
         am = FindObjectOfType<AudioManager>();
 
-    
+        anim = GetComponent<Animator>();
+
+
 
         //powerUp.timeUsed = 100;
     }
@@ -61,6 +66,8 @@ public class PlayerMove : MonoBehaviour
         {
             playerOnGround = true;
             currentJump = 0;
+            anim.SetBool("IsJumping", false);
+
         }
 
         if (collision.gameObject.tag == "MovingPlatform")// this collision detects whether the player is colliding with a moving platform, if it is, it will make the player a child object of the moving platform so that the player moves together with the platform, instead of just falling off~~Karahan
@@ -111,6 +118,7 @@ public class PlayerMove : MonoBehaviour
         playerMovement = playerMovement.normalized * speed;
         
         MovePlayer();
+        ControlAnimations();
 
 
     }
@@ -149,10 +157,28 @@ public class PlayerMove : MonoBehaviour
             
         }
     }
+    void ControlAnimations()
+    {
+        
+
+            if (MoveVector.x != 0f ||MoveVector.z != 0f)
+            {
+                anim.SetBool("IsRunning", true);
+                
+
+            }
+        else
+        {
+            anim.SetBool("IsRunning", false);
+        }
+            
+       
+        
+    }
 
     public void MovePlayer()
     {
-        Vector3 MoveVector = transform.TransformDirection(playerMovement) * speed;
+        MoveVector = transform.TransformDirection(playerMovement) * speed;
         rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
 
 
@@ -161,6 +187,9 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && (playerOnGround || maxJump > currentJump) && hasJumpingAbility == true) // if our max jump is > 0 , then increment the current jump;
         {
+
+            anim.SetBool("IsJumping", true);
+
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
             FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);
@@ -169,6 +198,7 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && playerOnGround && hasJumpingAbility == false) // if our max jump is > 0 , then increment the current jump;
         {
+            anim.SetBool("IsJumping", true);
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
             FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);
