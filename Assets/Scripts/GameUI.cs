@@ -11,6 +11,7 @@ public class GameUI : MonoBehaviour
     public GameState currentState;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI lifeText;
+    public TextMeshProUGUI starsText;
     public Image redKeyUI, blueKeyUI, yellowKeyUI;
     public GameObject allGameUI, mainMenuPanel, pauseMenuPanel, gameOverPanel, titleText,creditsPanel,creditsPanelGOver;
    
@@ -53,6 +54,7 @@ public class GameUI : MonoBehaviour
                 Manager3d.gamePaused = true;
                 Time.timeScale = 0f;
                 break;
+           
         }
     }
 
@@ -65,6 +67,8 @@ public class GameUI : MonoBehaviour
         gameOverPanel.SetActive(false);
         titleText.SetActive(true);
     }
+
+  
 
     public void GameActive()
     {
@@ -140,6 +144,8 @@ public class GameUI : MonoBehaviour
         CheckGameState(GameState.Playing);
     }
 
+ 
+
     public void PauseGame()
     {
         CheckGameState(GameState.Paused);
@@ -209,6 +215,11 @@ public class GameUI : MonoBehaviour
     public void UpdateLives()
     {
         lifeText.text = Manager3d.lives.ToString();
+    }
+
+    public void UpdateStars()
+    {
+        starsText.text = Manager3d.stars.ToString();
     }
 
     public void UpdateKeys(Manager3d.DoorKeyColour keyColours)
