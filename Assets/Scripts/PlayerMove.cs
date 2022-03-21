@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     private Vector3 playerMovement;
 
-    private Vector3 MoveVector;
+    public Vector3 MoveVector;
 
 
     public Rigidbody rb;
@@ -17,7 +17,6 @@ public class PlayerMove : MonoBehaviour
 
     public PowerUp powerUp;
 
-    [SerializeField] private Animator anim;
 
     public FloatPower floatPower;
 
@@ -52,7 +51,6 @@ public class PlayerMove : MonoBehaviour
 
         am = FindObjectOfType<AudioManager>();
 
-        anim = GetComponent<Animator>();
 
 
 
@@ -66,7 +64,6 @@ public class PlayerMove : MonoBehaviour
         {
             playerOnGround = true;
             currentJump = 0;
-            anim.SetBool("IsJumping", false);
 
         }
 
@@ -118,7 +115,6 @@ public class PlayerMove : MonoBehaviour
         playerMovement = playerMovement.normalized * speed;
         
         MovePlayer();
-        ControlAnimations();
 
 
     }
@@ -157,24 +153,7 @@ public class PlayerMove : MonoBehaviour
             
         }
     }
-    void ControlAnimations()
-    {
-        
-
-            if (MoveVector.x != 0f ||MoveVector.z != 0f)
-            {
-                anim.SetBool("IsRunning", true);
-                
-
-            }
-        else
-        {
-            anim.SetBool("IsRunning", false);
-        }
-            
-       
-        
-    }
+   
 
     public void MovePlayer()
     {
@@ -188,7 +167,6 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetButtonDown("Jump") && (playerOnGround || maxJump > currentJump) && hasJumpingAbility == true) // if our max jump is > 0 , then increment the current jump;
         {
 
-            anim.SetBool("IsJumping", true);
 
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
@@ -198,7 +176,6 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && playerOnGround && hasJumpingAbility == false) // if our max jump is > 0 , then increment the current jump;
         {
-            anim.SetBool("IsJumping", true);
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
             FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);

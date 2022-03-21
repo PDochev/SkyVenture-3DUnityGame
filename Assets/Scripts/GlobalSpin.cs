@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GlobalSpin : MonoBehaviour
 {
-    public float rotateSpeed = 1;
+    public float rotateSpeed = 0.5f;
 
     // Start is called before the first frame update
     void Start()
