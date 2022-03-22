@@ -5,7 +5,7 @@ using UnityEngine;
 public class Door3D : MonoBehaviour
 {
     public Manager3d.DoorKeyColour keyColour;
-
+    [SerializeField] private Animator anim;
 
 
     GameObject doorLock;
@@ -44,14 +44,17 @@ public class Door3D : MonoBehaviour
                     if (Manager3d.redKey)
                     {
                         FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.OpenDoor, transform.position, 1f);
-                        Destroy(doorLock);
+                        anim.SetBool("DoorOpened", true);
+                        //Destroy(doorLock);
                     }
                     break;
                 case Manager3d.DoorKeyColour.Blue:
                     if (Manager3d.blueKey)
                     {
                         FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.OpenDoor, transform.position, 1f);
-                        Destroy(doorLock);
+                        //Destroy(doorLock);
+                        anim.SetBool("DoorOpened", true);
+
                     }
 
                     break;
@@ -59,7 +62,9 @@ public class Door3D : MonoBehaviour
                     if (Manager3d.yellowKey)
                     {
                         FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.OpenDoor, transform.position, 1f);
-                        Destroy(doorLock);
+                        //Destroy(doorLock);
+                        anim.SetBool("DoorOpened", true);
+
                     }
 
                     break;
@@ -67,4 +72,6 @@ public class Door3D : MonoBehaviour
             }
         }
     }
+
+    
 }
