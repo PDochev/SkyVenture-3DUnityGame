@@ -8,11 +8,16 @@ public class PowerUp : MonoBehaviour
     public float rotateSpeed;
     public int timeUsed;
 
+    [SerializeField] GameObject leftShoe, rightShoe;
+
 
    public void Start()
     {
         hasPower = false;
         //timeUsed = 0;
+
+        leftShoe.active = false;
+        rightShoe.active = false;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -20,6 +25,8 @@ public class PowerUp : MonoBehaviour
         if (other.name == "Player")
         {
             hasPower = true;
+            leftShoe.active = true;
+            rightShoe.active = true;
             FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Power, transform.position, 0.5f);
 
             Destroy(gameObject);

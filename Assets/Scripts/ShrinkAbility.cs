@@ -15,10 +15,15 @@ public class ShrinkAbility : MonoBehaviour
 
     [SerializeField] ParticleSystem particle;
 
+    [SerializeField] GameObject shrinkPotion;
+
     // Start is called before the first frame update
     void Start()
     {
         transformed = false;
+
+        shrinkPotion.active = false;
+
     }
 
     // Update is called once per frame
@@ -28,6 +33,8 @@ public class ShrinkAbility : MonoBehaviour
 
         if (hasShrinkPower == true)
         {
+            shrinkPotion.active = true; //this line of code enables the potion model that attached to the side of the player when the powerup is taken 
+
             PlayerShrinkAbility();
         }
     }
