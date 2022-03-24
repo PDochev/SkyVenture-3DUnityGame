@@ -36,7 +36,7 @@ public class Manager3d : MonoBehaviour
         }
 
         gameUI = FindObjectOfType<GameUI>();
-        lives = 1;
+        lives = 3;
         coins = 0;
         stars = 0;
         gameUI.UpdateCoins();

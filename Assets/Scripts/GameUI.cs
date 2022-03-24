@@ -142,6 +142,7 @@ public class GameUI : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
         CheckGameState(GameState.Playing);
+        
     }
 
  

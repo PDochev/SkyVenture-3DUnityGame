@@ -70,21 +70,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioObject: {fileID: 5671860493633501000, guid: 04d9da3f7aeab4e18ba4af9ee44bf575, type: 3}
-  footSteps: []
+  footSteps:
+  - {fileID: 8300000, guid: 30900884aa38f0847a014a1682e46630, type: 3}
+  - {fileID: 8300000, guid: 0a587b627997d2e43a1a290e37725fc2, type: 3}
+  - {fileID: 8300000, guid: 79d6c672f14276242800f33e0869580e, type: 3}
+  - {fileID: 8300000, guid: 97ea7c753f504044ebd287d8dc2789c8, type: 3}
+  - {fileID: 8300000, guid: 75f890cf04ee9594daa06098c763ffda, type: 3}
   ladderSteps: []
-  jumpAudio: []
-  deathAudio: []
-  groundedAudio: []
+  jumpAudio:
+  - {fileID: 8300000, guid: 93609a91b0576624e93543806637d80b, type: 3}
+  deathAudio:
+  - {fileID: 8300000, guid: c1a55092dbc5e0e4380357d5ab8303c1, type: 3}
+  groundedAudio:
+  - {fileID: 8300000, guid: 0cf17ca7c83763c41ae73e8111fc6304, type: 3}
   ceilingedAudio: []
-  checkpoint: []
-  squishAudio: []
-  openDoorAudio: []
-  keyClips: []
-  coinClips: []
-  power: []
-  lives: []
-  bounce: []
-  shrink: []
-  dash: []
+  checkpoint:
+  - {fileID: 8300000, guid: 7eb41c7d6ca0449eaa6846a00a0947cd, type: 3}
+  squishAudio:
+  - {fileID: 8300000, guid: c1a55092dbc5e0e4380357d5ab8303c1, type: 3}
+  openDoorAudio:
+  - {fileID: 8300000, guid: 326e9f28d0e74bc4db590dce156bd95c, type: 3}
+  - {fileID: 8300000, guid: 5583862e1b0097741ba5f7519ba4584f, type: 3}
+  keyClips:
+  - {fileID: 8300000, guid: dcdb5e9554ba082458951c68f64c6bf6, type: 3}
+  coinClips:
+  - {fileID: 8300000, guid: 9d893338f4b519641ad643adeb01d802, type: 3}
+  - {fileID: 8300000, guid: 8356072373c0fee47863c2240ff9e3e4, type: 3}
+  - {fileID: 8300000, guid: 3dc4bb6c53138b44dbfd86cac1565d30, type: 3}
+  power:
+  - {fileID: 8300000, guid: 9dd056b0135ce43989d7e20c7361b915, type: 3}
+  lives:
+  - {fileID: 8300000, guid: b5cabb91ccf3a48b9a749639a9fc5eb4, type: 3}
+  bounce:
+  - {fileID: 8300000, guid: e52f4bc1510214880a3a655f93d380f6, type: 3}
+  shrink:
+  - {fileID: 8300000, guid: 8d0e8ceae4e774c13bb5e270eaa9e89a, type: 3}
+  dash:
+  - {fileID: 8300000, guid: e4cf009621584456c9a5d770362c8c9f, type: 3}
   star:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 8f2247cef2e924213bd327abce5833a6, type: 3}
