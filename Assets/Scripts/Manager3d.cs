@@ -60,7 +60,7 @@ public class Manager3d : MonoBehaviour
     {
         stars += starsValue;
         print(stars);
-        if(stars == 20)
+        if(stars == 10)
         {
 
             // gameUI.CheckGameState(GameUI.GameState.GameOver);
