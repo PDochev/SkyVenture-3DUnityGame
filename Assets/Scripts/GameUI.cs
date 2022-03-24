@@ -140,6 +140,8 @@ public class GameUI : MonoBehaviour
 
     public void StarGame()
     {
+
+
         SceneManager.LoadScene("Level1");
         CheckGameState(GameState.Playing);
         

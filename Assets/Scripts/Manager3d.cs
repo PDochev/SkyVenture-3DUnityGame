@@ -41,6 +41,9 @@ public class Manager3d : MonoBehaviour
         stars = 0;
         gameUI.UpdateCoins();
         gameUI.UpdateLives();
+        redKey = false;
+        blueKey = false;
+        yellowKey = false;
 
         //access new function in GameUi;     
     }
@@ -132,4 +135,6 @@ public class Manager3d : MonoBehaviour
 
         print(keyColour + "key has been picked up");
     }
+
+    
 }
