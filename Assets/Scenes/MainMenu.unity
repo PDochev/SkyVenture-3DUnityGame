@@ -8286,6 +8286,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7081519629379897133, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
+      propertyPath: m_text
+      value: "\t \n\t\n\t\n\tMade by Karahan and Plamen in \n\t2022 \n       \n"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0a005d8d7fbb43559fe29805fdf69e1, type: 3}
 --- !u!1001 &1932804551

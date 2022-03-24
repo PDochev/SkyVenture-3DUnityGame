@@ -7,14 +7,10 @@ public class PowerImage : MonoBehaviour
     public GameObject powerImage;
 
 
-    // Start is called before the first frame update
-  
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //private void Start()
+    //{
+    //    powerImage.SetActive(false);
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
