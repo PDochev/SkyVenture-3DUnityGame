@@ -24,7 +24,7 @@ public class MovingWall : MonoBehaviour
 
 
     bool destinationReached = true;
-
+    [SerializeField] bool changeDirection;
     //this boolean will check if a point has been reached, once it has this boolean will used to indicate to change ~~Karahan
 
 
@@ -38,9 +38,16 @@ public class MovingWall : MonoBehaviour
         secondP = secondPoint.transform.position;
 
         //here two of the vector 3 varaibles are being asigned to point A & B 's positions ~~Karahan
+        if (changeDirection == true)
+        {
+            gameObject.transform.position = firstP;
 
-        gameObject.transform.position = firstP;
+        }
+        if (changeDirection == false)
+        {
+            gameObject.transform.position = secondP;
 
+        }
         //to start of the chain reaction of the platform moving On start it will first start from point A ~~Karahan
 
 
