@@ -6,10 +6,12 @@ public class FloatPower : MonoBehaviour
 {
     [SerializeField] public bool hasFloatPower,currentlyFloating;
 
+    [SerializeField] GameObject glider;
     public void Start()
     {
         hasFloatPower = false;
         currentlyFloating = false;
+        glider.SetActive(false);
 
     }
 
@@ -36,6 +38,7 @@ public class FloatPower : MonoBehaviour
         if (collision.gameObject.tag == "FloatPower")
         {
             hasFloatPower = true;
+            glider.SetActive(true);
             FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Power, transform.position, 0.5f);
             Destroy(collision.gameObject);
 

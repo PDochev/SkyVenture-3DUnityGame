@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spin : MonoBehaviour
 {
 
-    public float rotateSpeed = 1;
+    public float rotateZ=0.5f,rotateSpeed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class Spin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, rotateSpeed, 0, Space.Self);
+        transform.Rotate(0, rotateSpeed, rotateZ, Space.Self);
 
     }
 }

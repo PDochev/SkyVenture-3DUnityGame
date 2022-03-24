@@ -15,9 +15,12 @@ public class ShrinkAbility : MonoBehaviour
 
     [SerializeField] ParticleSystem particle;
 
+    [SerializeField] GameObject potion;
+
     // Start is called before the first frame update
     void Start()
     {
+        potion.SetActive(false);
         transformed = false;
     }
 
@@ -90,6 +93,7 @@ public class ShrinkAbility : MonoBehaviour
         if (collision.gameObject.tag == "ShrinkPower")
         {
             hasShrinkPower = true;
+            potion.SetActive(true);
             FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Power, transform.position, 0.5f);
             Destroy(collision.gameObject);
         }

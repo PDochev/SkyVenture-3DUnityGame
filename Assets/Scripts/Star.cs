@@ -5,7 +5,6 @@ using UnityEngine;
 public class Star : MonoBehaviour
 {
     public int starsValue = 1;
-    public int rotateSpeed;
 
 
     private void OnTriggerEnter(Collider collision)
@@ -19,12 +18,5 @@ public class Star : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (!Manager3d.gamePaused)
-        {
-            transform.Rotate(0, rotateSpeed, 0, Space.World);
-        }
-
-    }
+    
 }
