@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyTop : MonoBehaviour
 {
+   
+
     //public PlayerMove playerMove;
 
 
@@ -26,15 +28,19 @@ public class EnemyTop : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        
         if (collision.gameObject.tag == "Player")
         {
             foreach (Transform child in transform)
                 child.gameObject.SetActive(false);
-            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Squish, transform.position, 1f);
+           
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Squish, transform.position, 0.2f);
             Destroy(transform.parent.gameObject);
             Manager3d.AddCoins(5);
 
 
         }
     }
+
+    
 }

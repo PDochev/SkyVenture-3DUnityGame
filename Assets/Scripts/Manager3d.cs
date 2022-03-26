@@ -62,7 +62,7 @@ public class Manager3d : MonoBehaviour
     public static void AddStars(int starsValue)
     {
         stars += starsValue;
-        print(stars);
+        //print(stars);
         if(stars == 10)
         {
 

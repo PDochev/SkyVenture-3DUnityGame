@@ -5,13 +5,13 @@ using UnityEngine;
 public class SpawnRollTraps : MonoBehaviour
 {
     public GameObject rollTrap1;
-    public GameObject rolltrap2;
+    
 
     float spawnTimer = 0f;
     public float spawnDelay = 2f;
 
-    float spawnXMin = 10f;
-    float spawnXMax = -10f;
+    //float spawnXMin = 10f;
+    //float spawnXMax = -10f;
     //[SerializeField] float spawnHeight = 1f;
 
 
