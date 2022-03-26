@@ -170,7 +170,7 @@ public class PlayerMove : MonoBehaviour
 
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
-            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 0.7f);
             currentJump++;
         }
 
@@ -178,7 +178,7 @@ public class PlayerMove : MonoBehaviour
         {
             rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
             playerOnGround = false;
-            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 1f);
+            FindObjectOfType<AudioManager>().AudioTrigger(AudioManager.SoundFXCat.Jump, transform.position, 0.7f);
            
         }
 
@@ -207,7 +207,7 @@ public class PlayerMove : MonoBehaviour
             if(sinceLastFootsteps > timeBetwenFootsteps)
             {
                 sinceLastFootsteps = 0f;
-                am.AudioTrigger(AudioManager.SoundFXCat.FootStepGrass, transform.position, 1f);
+                am.AudioTrigger(AudioManager.SoundFXCat.FootStepGrass, transform.position, 0.7f);
             }
         }
 

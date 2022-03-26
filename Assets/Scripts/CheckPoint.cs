@@ -11,7 +11,7 @@ public class CheckPoint : MonoBehaviour
     void Start()
     {
         
-        post = transform.Find("checkpoint").gameObject;
+//        post = transform.Find("checkpoint").gameObject;
     }
 
      private void OnTriggerEnter(Collider collision)
