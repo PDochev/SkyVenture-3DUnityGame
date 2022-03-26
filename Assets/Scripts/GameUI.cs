@@ -13,7 +13,7 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI lifeText;
     public TextMeshProUGUI starsText;
     public Image redKeyUI, blueKeyUI, yellowKeyUI;
-    public GameObject allGameUI, mainMenuPanel, pauseMenuPanel, gameOverPanel, titleText,creditsPanel,creditsPanelGOver;
+    public GameObject allGameUI, mainMenuPanel, pauseMenuPanel, gameOverPanel, titleText,creditsPanel,creditsPanelGOver,border;
    
 
 
@@ -66,6 +66,7 @@ public class GameUI : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         gameOverPanel.SetActive(false);
         titleText.SetActive(true);
+        border.SetActive(false);
     }
 
   

@@ -15,38 +15,45 @@ public class SwingingAxe : MonoBehaviour
     
     void Update()
     {
-        if (lerpRotation >= timeTakenToGoNextPosition)
+        if (!Manager3d.gamePaused)
         {
-            changeDirection = false;
 
+            if (lerpRotation >= timeTakenToGoNextPosition)
+            {
+                changeDirection = false;
+
+            }
+
+            if (lerpRotation2 >= timeTakenToGoNextPosition)
+            {
+                changeDirection = true;
+
+            }
+
+
+            if (changeDirection == true)
+            {
+
+                lerpRotation += speedOfSwing * Time.deltaTime;
+
+                gameObject.transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(end), lerpRotation);
+
+                lerpRotation2 = 0;
+            }
+
+            if (changeDirection == false)
+            {
+                lerpRotation2 += speedOfSwing * Time.deltaTime;
+
+                gameObject.transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(start), lerpRotation2);
+
+                lerpRotation = 0;
+
+            }
         }
 
-        if (lerpRotation2>= timeTakenToGoNextPosition)
-        {
-            changeDirection = true;
-
-        }
 
 
-        if (changeDirection==true)
-        {
-            
-            lerpRotation += speedOfSwing * Time.deltaTime;
-            
-            gameObject.transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(end), lerpRotation);
-
-            lerpRotation2 = 0;
-        }
-
-        if (changeDirection == false)
-        {
-            lerpRotation2 += speedOfSwing * Time.deltaTime;
-            
-            gameObject.transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(start), lerpRotation2);
-
-            lerpRotation = 0;
-
-        }
 
     }
 

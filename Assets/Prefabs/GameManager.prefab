@@ -87,7 +87,7 @@ MonoBehaviour:
   checkpoint:
   - {fileID: 8300000, guid: 7eb41c7d6ca0449eaa6846a00a0947cd, type: 3}
   squishAudio:
-  - {fileID: 8300000, guid: c1a55092dbc5e0e4380357d5ab8303c1, type: 3}
+  - {fileID: 8300000, guid: 279a8f233174f4c0a95073ddecee85cf, type: 3}
   openDoorAudio:
   - {fileID: 8300000, guid: 326e9f28d0e74bc4db590dce156bd95c, type: 3}
   - {fileID: 8300000, guid: 5583862e1b0097741ba5f7519ba4584f, type: 3}

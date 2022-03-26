@@ -16,7 +16,11 @@ public class Spin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, rotateSpeed, rotateZ, Space.Self);
+        if (!Manager3d.gamePaused)
+        {
+            transform.Rotate(0, rotateSpeed, rotateZ, Space.Self);
+        }
+           
 
     }
 }
