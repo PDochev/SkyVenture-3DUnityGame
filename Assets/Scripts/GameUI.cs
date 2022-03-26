@@ -38,6 +38,7 @@ public class GameUI : MonoBehaviour
         {
             case GameState.MainMenu:
                 MainMenuSetup();
+                Cursor.visible = true;
                 break;
             case GameState.Paused:
                 GamePaused();
@@ -67,6 +68,7 @@ public class GameUI : MonoBehaviour
         gameOverPanel.SetActive(false);
         titleText.SetActive(true);
         border.SetActive(false);
+        
     }
 
   
@@ -87,6 +89,7 @@ public class GameUI : MonoBehaviour
         pauseMenuPanel.SetActive(true);
         gameOverPanel.SetActive(false);
         titleText.SetActive(true);
+        
     }
 
     public void GameOver()
